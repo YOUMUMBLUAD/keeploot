@@ -1,0 +1,9 @@
+local serverStorage = game.ServerStorage
+local storedKeycard = serverStorage:FindFirstChildWhichIsA("Tool")
+local keycard = storedKeycard:Clone()
+
+script.Parent.ClickDetector.MouseClick:Connect(function(player)
+    if keycard.Parent ~= player.Backpack then
+        keycard.Parent = player.Backpack
+    end
+end)
